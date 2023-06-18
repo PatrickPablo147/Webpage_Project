@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>Arduino Components</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="index.html">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="#Temperature_Sensor" class="nav-link sub-item">Temperature Sensor  </a>
+            <a href="#DC_Motor" class="nav-link sub-item">DC Motor</a>
+            <a href="#LCD" class="nav-link sub-item">LCD Display</a>
+            <a href="#Ultrasonic_Sensor" class="nav-link sub-item">Ultrasonic Sensor</a>
+            <a href="#Bluetooth_Module" class="nav-link sub-item">Bluetooth Module</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="parts.html">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="simple_project.html">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="code.html">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="quiz.html">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Temperature_Sensor">
+        <header>Temperature Sensor</header>
+        <article>
+          <p>DS18B20 temperature sensor has three pins:</p>
+          <code>GND pin: needs to be connected to GND (0V)
+            VCC pin: needs to be connected to VVC (5V or 3.3V)
+            DATA pin: is 1-Wire Data bus. It should be connected to a digital pin on Arduino.
+          </code>
+          <p>
+            Connecting a DS18B20 temperature sensor to an Arduino requires a pull-up resistor, which can be a hassle. However, some manufacturers simplify the process by offering a wiring adapter that has a built-in pull-up resistor and a screw terminal block, making it much easier.
+          </p>
+          <img class="img components" src="assets/images/temperature.webp">
+        </article>
+      </section>
+      <section class="main-section" id="DC_Motor">
+        <header>DC Motor</header>
+        <article>
+          <p>The DC motor is the most basic of electric motors and is used in all types of hobby electronics. This guide provides you some basic information about the DC motors, how you can connect it to your Arduino, and how you can use it with Ozeki 10. The document also includes diagrams and videos to help you to understand the concept behind DC motors.</p>
+          <code>Positive wire: usually red
+            Negative wire: usually black
+          </code>
+          <img class="img components" src="assets/images/motor.webp">
+        </article>
+      </section>
+      <section class="main-section" id="LCD">
+        <header>LCD Display</header>
+        <article>
+          <p>The LCD (Liquid Crystal Display) is a type of display that uses the liquid crystals for its operation. Here, we will accept the serial input from the computer and upload the sketch to the Arduino. The characters will be displayed on the LCD.</p>
+          <p>LCD has up to 16 pins. In the most common uses, we do NOT use all pins.</p>
+          <p>With the support of LiquidCrystal library, we even can use LCD WITHOUT knowing the meaning of these pins. However, if you are curious or want to know in-depth, let's see these pins and their functionality:</p>
+          <img class="img components" src="assets/images/lcd.webp">
+        </article>
+      </section>
+      <section class="main-section" id="Ultrasonic_Sensor">
+        <header>Ultrasonic Sensor</header>
+        <article>
+          <p>Ultrasonic sensor HC-SR04 is used to measure the distance to an object by using ultrasonic waves.</p>
+          <code>VCC pin: needs to be connected to VCC (5V)
+            GND pin: needs to be connected to GND (0V)
+            TRIG pin: this pin receives the control signal (pulse) from Arduino.
+            ECHO pin: this pin sends a signal (pulse) to Arduino. Arduino measures the duration of pulse to calculate distance.
+          </code>
+          <img class="img components" src="assets/images/ultrasonic.webp">
+        </article>
+      </section>
+      <section class="main-section" id="Bluetooth_Module">
+        <header>Bluetooth Module</header>
+        <article>
+          <p>HC-05 is a serial Bluetooth Serial port protocol module that is easy to use. You can communicate with HC-05 over serial protocol. It does:</p>
+          <lu>
+            <li>Receive data from the Serial RX pin and transmit the data to the paired device (such as a smartphone) via Bluetooth</li>
+            <li>Receive data from Bluetooth (from the paired device) and send the data to the Serial TX pin.</li>
+          </lu>
+          <p>The UART-style communication mode makes it a favorite choice for Arduino enthusiasts. </p>
+          <img class="img components" src="assets/images/bluetooth.webp">
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>

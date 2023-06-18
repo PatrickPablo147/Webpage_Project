@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>Quiz</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="index.html">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="components.html">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="parts.html">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="simple_project.html">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="code.html">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Arduino">
+        <header>Take a short Quiz</header>
+        <article>
+          <p>Try a Quiz to test your knowledge you learn about Arduino</p>
+          <lu>
+            <li><a target="_blank" href="test.html">/* This page should link for quiz */</a></li>
+          </lu>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>

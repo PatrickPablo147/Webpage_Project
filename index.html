@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>Introduction</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="#">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="#Arduino" class="nav-link sub-item">What is Arduino?</a>
+            <a href="#Massimo_Banzi" class="nav-link sub-item">Massimo Banzi</a>
+            <a href="#1896" class="nav-link sub-item">1896</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="components.html">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="parts.html">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="simple_project.html">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="code.html">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="quiz.html">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Arduino">
+        <header>What is Arduino?</header>
+        <article>
+          <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. You can tell your board what to do by sending a set of instructions to the microcontroller on the board. To do so you use the Arduino programming language (based on Wiring), and the Arduino Software (IDE), based on Processing.</p>
+          <p>Over the years Arduino has been the brain of thousands of projects, from everyday objects to complex scientific instruments. A worldwide community of makers:</p>
+          <lu>
+            <li>Student</li>
+            <li>Hobbyists</li>
+            <li>Artist</li>
+            <li>Programmers</li>
+            <li>Professionals</li>
+          </lu>
+          <p>Arduino was born at the Ivrea Interaction Design Institute as an easy tool for fast prototyping, aimed at students without a background in electronics and programming. As soon as it reached a wider community, the Arduino board started changing to adapt to new needs and challenges, differentiating its offer from simple 8-bit boards to products for IoT applications, wearable, 3D printing, and embedded environments.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Massimo_Banzi">
+        <header>Massimo Banzi</header>
+        <article>
+          <p>with David Mellis, another IDII student, and David Cuartielles, extended Wiring by adding support for the cheaper ATmega8 microcontroller. The new project, forked from Wiring, was called Arduino.</p>
+          <p>Massimo Banzi is the co-founder of the Arduino project. He is an Interaction Designer, Educator and Open Source Hardware advocate. He has worked as a consultant for clients such as: Prada, Artemide, Persol, Whirlpool, V&A Museum and Adidas.</p>
+          <p>Massimo is also the author of “Getting Started with Arduino” published by O’Reilly. He is a regular contributor to the italian edition of Wired Magazine and Che Futuro, an online magazine about innovation.</p>
+          <img class="img" id="massimo" src="assets/images/massimo.jpg">
+        </article>
+      </section>
+      <section class="main-section" id="1896">
+        <header>1896</header>
+        <article>
+          <p>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</p>
+          <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+          <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>

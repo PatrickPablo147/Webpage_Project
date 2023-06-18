@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>C++ Code</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="index.html">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="components.html">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="parts.html">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="simple_project.html">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="#Digital_Read" class="nav-link sub-item">Digital Read</a>
+            <a href="#Digital_Write" class="nav-link sub-item">Digital Write</a>
+            <a href="#Pin_Mode" class="nav-link sub-item">Pin Mode</a>
+            <a href="#Analog_Write" class="nav-link sub-item">Analog Write</a>
+            <a href="#is_Alpha" class="nav-link sub-item">is Alpha</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="quiz.html">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Digital_Read">
+        <header>Digital Read</header>
+        <article>
+          <p>Reads the value from a specified digital pin, either HIGH or LOW.</p>
+          <p>
+            Syntax
+            <code>digital<i>(pin)</i></code>
+          </p>
+          <p>
+            Parameters
+            <code>pin: the Arduino pin number you want to read</code>
+          </p>
+          <p>
+            Returns:
+            <code>High or Low</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Digital_Write">
+        <header>Digital Write</header>
+        <article>
+          <p>Write a HIGH or a LOW value to a digital pin.</p>
+          <p>If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.</p>
+          <p>
+            Syntax
+            <code>digitalWrite<i>(pin, value)</i></code>
+          </p>
+          <p>
+            Parameters
+            <code>pin: the Arduino pin number.
+              value: HIGH or LOW.
+            </code>
+          </p>
+          <p>
+            Returns:
+            <code>High or Low</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Pin_Mode">
+        <header>Pin Mode</header>
+        <article>
+          <p>Configures the specified pin to behave either as an input or an output. See the Digital Pins page for details on the functionality of the pins.</p>
+          <p>As of Arduino 1.0.1, it is possible to enable the internal pullup resistors with the mode INPUT_PULLUP. Additionally, the INPUT mode explicitly disables the internal pullups.</p>
+          <p>
+            Syntax
+            <code>pinMode<i>(pin, mode)</i></code>
+          </p>
+          <p>
+            Parameters
+            <code>pin: the Arduino pin number to set the mode of.
+              mode: INPUT, OUTPUT, or INPUT_PULLUP. See the <a href="#">Digital Pins</a> page for a more complete description of the functionality.
+            </code>
+          </p>
+          <p>
+            Returns:
+            <code>Nothing</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Analog_Write">
+        <header>Analog Write</header>
+        <article>
+          <p>Writes an analog value (PWM wave) to a pin. Can be used to light a LED at varying brightnesses or drive a motor at various speeds. After a call to analogWrite(), the pin will generate a steady rectangular wave of the specified duty cycle until the next call to analogWrite() (or a call to digitalRead() or digitalWrite()) on the same pin.</p>
+          <p>
+            Syntax
+            <code>analogWrite<i>(pin, value)</i></code>
+          </p>
+          <p>
+            Parameters
+            <code>pin: the Arduino pin to write to. Allowed data types: int.
+              value: the duty cycle: between 0 (always off) and 255 (always on). Allowed data types: int.
+            </code>
+          </p>
+          <p>
+            Returns:
+            <code>Nothing</code>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="is_Alpha">
+        <header>is Alpha</header>
+        <article>
+          <p>Analyse if a char is alpha (that is a letter). Returns true if thisChar contains a letter.</p>
+          <p>
+            Syntax
+            <code>isAlpha<i>(thisChar)</i></code>
+          </p>
+          <p>
+            Parameters
+            <code>thisChar: variable. Allowed data types: char.</code>
+          </p>
+          <p>
+            Returns:
+            <code>true: if thisChar is alpha.</code>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>

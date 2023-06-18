@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>Arduino Parts</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="index.html">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="components.html">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="#Reset_Button" class="nav-link sub-item">Reset Button</a>
+            <a href="#USB" class="nav-link sub-item">USB Port</a>
+            <a href="#Voltage_Regulator" class="nav-link sub-item">Voltage Regulator</a>
+            <a href="#Power_Port" class="nav-link sub-item">Power Port</a>
+            <a href="#Digital_Pins" class="nav-link sub-item">Digital I/O Pins</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="simple_project.html">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="code.html">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="quiz.html">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+        <img class="img" id="arduino_parts" src="assets/images/arduino parts.png">
+      <section class="main-section" id="Reset_Button">
+        <header>Reset Button</header>
+        <article>
+          <p>This button is used to restart the code that is loaded on the Arduino.</p>
+          <p>Much like turning your computer off and on again, some problems with the Arduino can be solved by pushing the reset button. This button will restart the code currently uploaded on your Arduino. The reset button may be in a different location on your board than in this diagram, but it is the only button.</p>
+        </article>
+      </section>
+      <section class="main-section" id="USB">
+        <header>USB Port</header>
+        <article>
+          <p>When connected to the computer, provides 5 volts at 500mA.</p>
+          <p>The USB port takes a standard A-to-B USB cable, often seen on printers or other computer peripherals. The USB port serves two purposes: First, it is the cable connection to a computer which allows you to program the board. The USB cord will also provide power for the Arduino if you’re not using the power port (described below).</p>
+        </article>
+      </section>
+      <section class="main-section" id="Voltage_Regulator">
+        <header>Voltage Regulator</header>
+        <article>
+          <p>The voltage regulator converts power plugged into the power port (described below) into the 5 volts and 1 amp standard used by the Arduino. BE CAREFUL! This component gets very hot.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Power_Port">
+        <header>Power Port</header>
+        <article>
+          <p>The power port includes a barrel-style connector which allows for either power straight from a wall source (often called a wall-wart) or from a battery. This power is used instead of the USB cable. The Arduino can take a wide range of voltages (5V – 20V) but will be damaged if power higher than that is connected.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Digital_Pins">
+        <header>Digital I/O Pins</header>
+        <article>
+          <p>The holes on this side of the board are called the digital input/output pins They are used to either sense the outside world (input) or control lights, sounds, or motors (output).</p>
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" charset="utf-8"></script>
+    <title>App Dev Project</title>
+  </head>
+  <body>
+    <header><b>Simple Project Sample</b></header>
+    <nav id="navbar">
+      <header><b>ReCap: Arduino</b></header>
+      <div>
+        <li>
+          <a class="nav-link" href="index.html">
+            Introduction
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="components.html">
+            Andruino Components
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="parts.html">
+            Arduino Parts
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            Simple Project
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="#Alarm" class="nav-link sub-item">Security and Alarm</a>
+            <a href="#Traffic_Light" class="nav-link sub-item">Traffic Light</a>
+            <a href="#Time_Clock" class="nav-link sub-item">Simple Time Clock</a>
+            <a href="#Remote_Control" class="nav-link sub-item">Remote Control</a>
+            <a href="#Humidifier" class="nav-link sub-item">Portable Humidifier</a>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link" href="code.html">
+            C++ Code
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            Try a Quiz
+          </a>
+        </li>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Alarm">
+        <header>Security and Alarm System Project</header>
+        <article>
+          <p>The Arduino Security Alarm System with Ultrasonic Sensor and Password Protection is a project designed to provide a reliable and customizable security solution. The system is activated by pressing the A button, after which a 10-second countdown begins. Once the countdown ends, the system becomes armed and ready to detect any objects or movements within its range.</p>
+          <p>To learn more how to do the Arduino Security and Alarm Project visit <a target="_blank" href="https://howtomechatronics.com/projects/arduino-security-alarm-system-project/">howtomechatronics.com</a> for step by step instructions.</p>
+          <img class="img" src="assets/images/alarm.webp">
+        </article>
+      </section>
+      <section class="main-section" id="Traffic_Light">
+        <header>Traffic Light Controller Project</header>
+        <article>
+          <p>The Arduino Traffic Light project is a fun and engaging endeavor that can be completed within a short period of time, requiring minimal effort. This project provides a step-by-step guide on building a traffic light using an Arduino microcontroller, allowing enthusiasts to gain hands-on experience in electronics and programming. Additionally, the project explores the possibility of modifying the circuit to create an advanced variation.</p>
+          <p>To learn more how to do the Traffic Light Controller Project visit <a target="_blank" href="https://www.makeuseof.com/tag/arduino-traffic-light-controller/">makeuseof.com</a> for step by step instructions.</p>
+          <img class="img" src="assets/images/traffic.webp">
+        </article>
+      </section>
+      <section class="main-section" id="Time_Clock">
+        <header>Simple Time Clock Project</header>
+        <article>
+          <p>The Arduino Time Clock project is a versatile and practical endeavor that involves building a digital clock using the Arduino microcontroller platform. This project focuses on creating a reliable and accurate timekeeping system that can display the current time and date while providing additional functionalities. By engaging in this project, participants can delve into the world of Arduino programming, electronic components, and time management concepts.</p>
+          <p>This Arduino Time Clock project offers a practical and educational experience for enthusiasts interested in electronics, programming, and time management. By building a functional timekeeping system, participants gain valuable insights into Arduino programming concepts, component integration, and customization possibilities. Whether used as a standalone clock or as a foundation for more advanced projects, the Arduino Time Clock provides a solid foundation for exploring the exciting world of Arduino-based timekeeping solutions.</p>
+          <p>To learn more how to do the Arduino Time Clock Project visit <a target="_blank" href="https://projecthub.arduino.cc/Arduino_Scuola/arduino-clock-260d8c">projecthub.arduino.cc</a> for in-depth instructions.</p>
+          <img class="img" src="assets/images/clock.webp">
+        </article>
+      </section>
+      <section class="main-section" id="Remote_Control">
+        <header>Remote Control</header>
+        <article>
+          <p>The Arduino Wireless Remote Control project focuses on establishing wireless serial communication between two Arduino boards to enable remote control functionalities for a wide range of Arduino projects. The project offers a comprehensive walkthrough of the steps involved in setting up the wireless communication and highlights potential challenges and areas for improvement. The primary objective is to create a functional remote control system capable of transmitting both PWM and digital data from one Arduino to another.</p>
+          <p>To learn more how to do the Traffic Light Controller Project visit <a target="_blank" href="https://www.instructables.com/Simple-Remote-Control-for-Arduino/">instructables.com</a> for step by step instructions.</p>
+          <img class="img" src="assets/images/remote.jpg">
+        </article>
+      </section>
+      <section class="main-section" id="Humidifier">
+        <header>Portable Humidifier</header>
+        <article>
+          <p>The DIY Automatic Humidifier project aims to build a device that can effectively increase and maintain the relative humidity in a closed area. Particularly during the winter season when heaters are commonly used, the air's relative humidity tends to decrease. In this project, we will utilize an Arduino microcontroller, a sensor mechanism, and a display to create an automatic humidifier that can monitor and regulate the relative humidity (RH) levels in the atmosphere.</p>
+          <p>To learn more how to do the Arduino Time Clock Project visit <a target="_blank" href="https://projecthub.arduino.cc/Arduino_Scuola/arduino-clock-260d8c">projecthub.arduino.cc</a> for in-depth instructions.</p>
+          <img class="img" src="assets/images/humidifier.jpg">
+        </article>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.nav-link').click(function() {
+              $(this).next('.sub-menu').slideToggle();
+              $(this).find('.dropdown').toggleClass('rotate');
+          });
+      });
+    </script>
+    
+  </body>
+</html>
