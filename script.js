@@ -1,3 +1,10 @@
+$(document).ready(function(){
+    $('.nav-link').click(function() {
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+    });
+});
+
 const questions = [
     {
         question: "Who develope the Arduino?",
